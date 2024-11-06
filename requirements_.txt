@@ -1,0 +1,9 @@
+matplotlib==3.5.2
+numpy==1.23.4
+opencv_python==4.6.0.66
+pandas==1.4.4
+Pillow==9.3.0
+pyserial==3.5
+pyusb==1.2.1
+PyYAML==6.0
+scipy==1.9.1

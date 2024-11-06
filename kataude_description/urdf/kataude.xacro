@@ -1,0 +1,259 @@
+<?xml version="1.0" ?>
+<robot name="kataude" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find kataude_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find kataude_description)/urdf/kataude.trans" />
+<xacro:include filename="$(find kataude_description)/urdf/kataude.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.15278443948564172 -1.646071389736825e-05 1.9943676527636152" rpy="0 0 0"/>
+    <mass value="3.145965262261491"/>
+    <inertia ixx="0.001806" iyy="0.005212" izz="0.004982" ixy="-0.0" iyz="0.0" ixz="4e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kataude_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque696969"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kataude_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="UpperArm_1">
+  <inertial>
+    <origin xyz="2.3936065328189482e-05 0.06873152009023258 -0.3984141268400523" rpy="0 0 0"/>
+    <mass value="142.51149550389982"/>
+    <inertia ixx="5.64702" iyy="5.488361" izz="0.635098" ixy="-0.0" iyz="-0.000188" ixz="2.8e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.3025 0.06899 -2.01652" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kataude_description/meshes/UpperArm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="0.3025 0.06899 -2.01652" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kataude_description/meshes/UpperArm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="XM540_270R__3_1">
+  <inertial>
+    <origin xyz="0.024533563447407203 -0.00021381174077944674 -0.0631193250864" rpy="0 0 0"/>
+    <mass value="0.09824516357620273"/>
+    <inertia ixx="6.2e-05" iyy="5.8e-05" izz="2.8e-05" ixy="-0.0" iyz="-0.0" ixz="-2e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.321809 0.000911 -0.457908" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kataude_description/meshes/XM540_270R__3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque696969"/>
+  </visual>
+  <collision>
+    <origin xyz="0.321809 0.000911 -0.457908" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kataude_description/meshes/XM540_270R__3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="mikata_arm_1">
+  <inertial>
+    <origin xyz="-9.00741698207086e-05 -0.02460604325871079 -0.04241777280246267" rpy="0 0 0"/>
+    <mass value="0.5291067052461904"/>
+    <inertia ixx="0.000219" iyy="0.00018" izz="0.000224" ixy="-1e-06" iyz="-6e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.297625 -0.025704 -0.374375" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kataude_description/meshes/mikata_arm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="0.297625 -0.025704 -0.374375" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kataude_description/meshes/mikata_arm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Shoulder_Servo3_1">
+  <inertial>
+    <origin xyz="-0.001267246990176496 0.00020718172021483958 0.029980098166622282" rpy="0 0 0"/>
+    <mass value="4.659806299364297"/>
+    <inertia ixx="0.006381" iyy="0.074421" izz="0.076997" ixy="7.7e-05" iyz="1.2e-05" ixz="-0.006229"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.2215 2e-05 -1.99849" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kataude_description/meshes/Shoulder_Servo3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque696969"/>
+  </visual>
+  <collision>
+    <origin xyz="0.2215 2e-05 -1.99849" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kataude_description/meshes/Shoulder_Servo3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ForeArm_1">
+  <inertial>
+    <origin xyz="0.00010929466551301559 0.06821266521028407 -0.3727168964631816" rpy="0 0 0"/>
+    <mass value="131.66138695773583"/>
+    <inertia ixx="4.458919" iyy="4.313539" izz="0.590679" ixy="0.0" iyz="-0.00075" ixz="-0.000184"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.302466 0.069082 -1.250541" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kataude_description/meshes/ForeArm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="0.302466 0.069082 -1.250541" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kataude_description/meshes/ForeArm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="XM540_270R_2_1">
+  <inertial>
+    <origin xyz="-0.0002450048864300891 2.0149603131389355e-05 -0.03209129443533182" rpy="0 0 0"/>
+    <mass value="0.09211846580456283"/>
+    <inertia ixx="3.9e-05" iyy="4.6e-05" izz="2.4e-05" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.297326 0.000884 -0.507317" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kataude_description/meshes/XM540_270R_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque696969"/>
+  </visual>
+  <collision>
+    <origin xyz="0.297326 0.000884 -0.507317" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kataude_description/meshes/XM540_270R_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gripper1_1">
+  <inertial>
+    <origin xyz="-0.019092930378784956 -0.008786732838234303 -0.03526207180079688" rpy="0 0 0"/>
+    <mass value="0.3618135799855471"/>
+    <inertia ixx="0.0003" iyy="0.000362" izz="0.000133" ixy="0.0" iyz="2.3e-05" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.280651 0.018105 -0.328133" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kataude_description/meshes/gripper1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.280651 0.018105 -0.328133" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kataude_description/meshes/gripper1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gripper2_1">
+  <inertial>
+    <origin xyz="-0.01899942595107912 0.009210263060438971 -0.027914083411589796" rpy="0 0 0"/>
+    <mass value="0.27970437781382335"/>
+    <inertia ixx="0.000199" iyy="0.000246" izz="0.000104" ixy="-0.0" iyz="-8e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.280651 -0.013895 -0.328133" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kataude_description/meshes/gripper2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.280651 -0.013895 -0.328133" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kataude_description/meshes/gripper2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="ShoulderJoint2" type="revolute">
+  <origin xyz="-0.081 -0.06897 0.01803" rpy="0 0 0"/>
+  <parent link="Shoulder_Servo3_1"/>
+  <child link="UpperArm_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+  <limit upper="3.141593" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="xm540_2" type="revolute">
+  <origin xyz="-0.024483 -2.7e-05 -0.049409" rpy="0 0 0"/>
+  <parent link="XM540_270R_2_1"/>
+  <child link="XM540_270R__3_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="xm540_3" type="revolute">
+  <origin xyz="0.024184 0.026615 -0.083533" rpy="0 0 0"/>
+  <parent link="XM540_270R__3_1"/>
+  <child link="mikata_arm_1"/>
+  <axis xyz="-0.0 1.0 -0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="ShoulderJoint1" type="revolute">
+  <origin xyz="-0.2215 -2e-05 1.99849" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Shoulder_Servo3_1"/>
+  <axis xyz="1.0 -0.0 -0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="ElbowJoint" type="revolute">
+  <origin xyz="3.4e-05 -9.2e-05 -0.765979" rpy="0 0 0"/>
+  <parent link="UpperArm_1"/>
+  <child link="ForeArm_1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="xm540_1" type="continuous">
+  <origin xyz="0.00514 0.068198 -0.743224" rpy="0 0 0"/>
+  <parent link="ForeArm_1"/>
+  <child link="XM540_270R_2_1"/>
+  <axis xyz="0.0 -0.0 -1.0"/>
+</joint>
+
+<joint name="EndEffecter1" type="revolute">
+  <origin xyz="0.016974 -0.043809 -0.046242" rpy="0 0 0"/>
+  <parent link="mikata_arm_1"/>
+  <child link="gripper1_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+  <limit upper="0.0" lower="-1.047198" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Endeffecter2" type="revolute">
+  <origin xyz="0.016974 -0.011809 -0.046242" rpy="0 0 0"/>
+  <parent link="mikata_arm_1"/>
+  <child link="gripper2_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+  <limit upper="1.047198" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+</robot>

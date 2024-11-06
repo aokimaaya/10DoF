@@ -1,0 +1,9 @@
+<launch>
+
+<rosparam file="$(find kataude_description)/launch/controller.yaml" command="load"/>
+<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="kataude" args="ShoulderJoint2_position_controller xm540_2_position_controller xm540_3_position_controller ShoulderJoint1_position_controller ElbowJoint_position_controller xm540_1_position_controller EndEffecter1_position_controller Endeffecter2_position_controller joint_state_controller "/>
+<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+  <remap from="/joint_states" to="/kataude/joint_states"/>
+</node>
+
+</launch>
